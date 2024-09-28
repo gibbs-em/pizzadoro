@@ -1,6 +1,6 @@
 import { useTimerContext } from "../hooks/useTimerContext";
 
-function App() {
+function TimerDisplay() {
   const {
     startTimer,
     stopTimer,
@@ -10,22 +10,21 @@ function App() {
     timerInProgress,
   } = useTimerContext();
 
-  console.log(timerInProgress);
-
   return (
-    <>
-      <h1>Pizzadoro</h1>
+    <div className="timer">
+      <div className="timer-clock">
       <span className="timer-display">{formatTime(remainingTime)}</span>
-      <div className="card">
+      <div className="buttons">
         {timerInProgress ? (
-          <button onClick={stopTimer}>Pause</button>
+          <button onClick={stopTimer}>PAUSE</button>
         ) : (
-          <button onClick={startTimer}>Start</button>
+          <button onClick={startTimer}>START</button>
         )}
-        <button onClick={resetTimer}>Reset</button>
+        <button onClick={resetTimer}>RESET</button>
       </div>
-    </>
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default TimerDisplay;

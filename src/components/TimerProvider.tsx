@@ -17,7 +17,7 @@ interface TimerProviderProps {
 }
 
 export function TimerProvider({ children }: TimerProviderProps) {
-    const [remainingTime, setRemainingTime] = useState(1500)
+    const [remainingTime, setRemainingTime] = useState(10) // change back to 1500 once tested
     const [timerInProgress, setTimerInProgress] = useState(false)
     const intervalRef = useRef<number | null>(null)
   

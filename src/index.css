@@ -1,25 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Smokum&family=VT323&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #181e9d;
+  background-color: #f5eadd;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
@@ -30,25 +21,82 @@ body {
   min-height: 100vh;
 }
 
+.border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.title {
+  transform: translateX(-55px);
+}
+
 h1 {
-  font-size: 3.2em;
+  font-family: "Smokum", serif;
+  font-size: 5em;
   line-height: 1.1;
+  transform: rotate(345deg);
+}
+
+.subheading {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-style: italic;
+  transform: translateY(-55px) translateX(100px);
+}
+
+.timer {
+  border-radius: 20px;
+  -webkit-box-shadow: 8px 8px 19px 3px rgba(173, 155, 135, 1);
+  -moz-box-shadow: 8px 8px 19px 3px rgba(173, 155, 135, 1);
+  box-shadow: 8px 8px 19px 3px rgba(173, 155, 135, 1);
+}
+
+.timer-clock {
+  background-color: #e6e0e0;
+  border-radius: 20px;
+  padding: 28px 40px 32px;
+  -webkit-box-shadow: inset 18px 18px 32px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: inset 18px 18px 32px 0px rgba(255, 255, 255, 1);
+  box-shadow: inset 18px 18px 32px 0px rgba(255, 255, 255, 1);
+}
+
+.timer-display {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #c2bfbf;
+  color: #484646;
+  font-size: 6em;
+  border-radius: 20px;
+  padding: 8px 28px;
+  -webkit-box-shadow: inset 4px 4px 32px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 4px 4px 32px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 4px 4px 32px 0px rgba(0, 0, 0, 0.25);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  border: 1px solid #C5C1C1;
+  font-size: 2em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  font-family: "Rethink Sans", sans-serif;
+  color: #696565;
+  background-color: #e6e0e0;
   cursor: pointer;
   transition: border-color 0.25s;
+  -webkit-box-shadow: inset 6px 6px 15px 0px rgba(255,245,245,1);
+  -moz-box-shadow: inset 6px 6px 15px 0px rgba(255,245,245,1);
+  box-shadow: inset 6px 6px 15px 0px rgba(255,245,245,1);
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -56,7 +104,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #484646;
     background-color: #ffffff;
   }
   a:hover {
